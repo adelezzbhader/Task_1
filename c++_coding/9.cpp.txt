@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int passlog=12345,pass,choose,balance=1230,value;
+    cout <<"enter your pass"<<endl;
+    cin>>pass;
+    if (pass==passlog)
+    {
+        cout<<"welcome in your account"<<endl;
+        cout<<"if you want to deposit click 1"<<endl;
+        cout<<"if you want to withdraw  click 2"<<endl;
+        cout<<"if you want to know your balance click 3 "<<endl;
+        cin>>choose;
+        if (choose ==1)
+        {
+            cout<<"enter the financial value "<<endl;
+            cin >>value;
+            cout<<"the entered value is "<<value<<endl;
+            cout<<"and your balance now is "<<balance+value ;
+        }
+        else if (choose == 2)
+        {
+            cout<<"how much money you want?"<<endl;
+            cin >> value;
+            if (balance<value)
+            {
+                cout<<"not enough money"<<endl;
+            }
+            cout<<"your balance is "<<balance-value ;
+        }
+        else if (choose == 3)
+        {
+            cout<<balance;
+        }
+
+
+
+    }
+    else
+        cout<<"password is incorrect"<<endl;
+
+
+
+
+
+    return 0;
+}
